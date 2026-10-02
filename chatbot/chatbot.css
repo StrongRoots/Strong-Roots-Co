@@ -1,0 +1,76 @@
+/* Strong Roots Co. website chatbot — matches site branding (greens/ambers) */
+#sr-chat-btn {
+  position: fixed; right: 20px; bottom: 20px; z-index: 9998;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #1e7a1e; border: none; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,.28);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .15s ease;
+}
+#sr-chat-btn:hover { transform: scale(1.06); }
+#sr-chat-btn svg { width: 30px; height: 30px; fill: #fff; }
+#sr-chat-btn .sr-dot {
+  position: absolute; top: 2px; right: 2px; width: 14px; height: 14px;
+  background: #f59e0b; border-radius: 50%; border: 2px solid #fff;
+}
+#sr-chat-panel {
+  position: fixed; right: 20px; bottom: 92px; z-index: 9999;
+  width: 378px; max-width: calc(100vw - 40px); height: 540px; max-height: calc(100vh - 130px);
+  background: #fff; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,.3);
+  display: none; flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+#sr-chat-panel.sr-open { display: flex; }
+#sr-chat-head {
+  background: #155c15; color: #fff; padding: 14px 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+#sr-chat-head .sr-avatar {
+  width: 38px; height: 38px; border-radius: 50%; background: #f59e0b;
+  display: flex; align-items: center; justify-content: center; font-size: 22px; flex: none;
+}
+#sr-chat-head .sr-title { font-weight: 700; font-size: 15px; }
+#sr-chat-head .sr-sub { font-size: 12px; opacity: .85; }
+#sr-chat-head .sr-sub::before {
+  content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  background: #4ade80; margin-right: 5px;
+}
+#sr-chat-close {
+  margin-left: auto; background: none; border: none; color: #fff;
+  font-size: 22px; cursor: pointer; line-height: 1; padding: 4px;
+}
+#sr-chat-body { flex: 1; overflow-y: auto; padding: 14px; background: #f7faf7; }
+.sr-msg { max-width: 82%; padding: 10px 13px; border-radius: 14px; font-size: 14px; line-height: 1.45; margin-bottom: 10px; white-space: pre-line; }
+.sr-bot { background: #fff; border: 1px solid #e5e7eb; border-bottom-left-radius: 4px; color: #1f2937; }
+.sr-user { background: #1e7a1e; color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
+.sr-msg a { color: #1e7a1e; font-weight: 600; }
+.sr-user a { color: #fff; }
+#sr-quick { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 14px 10px; background: #f7faf7; }
+.sr-chip {
+  background: #fff; border: 1px solid #1e7a1e; color: #1e7a1e; border-radius: 20px;
+  padding: 6px 12px; font-size: 13px; cursor: pointer;
+}
+.sr-chip:hover { background: #1e7a1e; color: #fff; }
+#sr-chat-foot { display: flex; border-top: 1px solid #e5e7eb; background: #fff; }
+#sr-chat-input {
+  flex: 1; border: none; padding: 13px 14px; font-size: 14px; outline: none;
+}
+#sr-chat-send {
+  background: #1e7a1e; color: #fff; border: none; padding: 0 18px;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+}
+#sr-chat-send:hover { background: #155c15; }
+.sr-lead-form input, .sr-lead-form select, .sr-lead-form textarea {
+  width: 100%; box-sizing: border-box; margin-bottom: 8px; padding: 9px 10px;
+  border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px;
+}
+.sr-lead-form button {
+  width: 100%; background: #d97706; color: #fff; border: none; border-radius: 8px;
+  padding: 11px; font-size: 15px; font-weight: 700; cursor: pointer;
+}
+.sr-lead-form button:hover { background: #b45309; }
+@media (max-width: 480px) {
+  #sr-chat-panel { right: 10px; bottom: 84px; max-width: calc(100vw - 20px); }
+  #sr-chat-btn { right: 14px; bottom: 14px; }
+}
