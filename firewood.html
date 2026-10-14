@@ -173,6 +173,13 @@
     .price-card .per { color: var(--muted); font-size: .9rem; margin-bottom: 12px; }
     .price-card p { color: var(--muted); font-size: .95rem; margin: 0 0 16px; }
 
+    .stack-banner {
+      margin-top: 22px; background: #fff7e6; border: 2px dashed var(--orange);
+      border-radius: var(--radius); padding: 18px 22px; text-align: center; font-size: 1.02rem;
+    }
+    .stack-banner strong { color: var(--ink); }
+    .stack-banner .amt { color: var(--green-dark); font-weight: 800; }
+
     .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 24px; }
     .step {
       background: var(--card); border-radius: var(--radius); padding: 24px 20px;
@@ -315,6 +322,11 @@
           <a class="btn btn-orange" href="sms:+18013301444?&body=Hi!%20I'd%20like%20to%20order%20a%20full%20cord%20of%20firewood.">💬 Order Full Cord</a>
         </div>
       </div>
+      <div class="stack-banner">
+        <strong>💪 Want it stacked?</strong> Skip the pile in the driveway — we'll stack it neatly where you want it.
+        Add stacking to your order: <span class="amt">+$45</span> with a half cord, <span class="amt">+$65</span> with a full cord.<br />
+        <strong>Need more wood?</strong> Add a second full cord for <span class="amt">$299</span> — save $50. Just mention it when you order.
+      </div>
     </section>
 
     <section class="block" style="background:#fff; max-width:none;">
@@ -330,7 +342,7 @@
           <div class="step">
             <div class="num">2</div>
             <h3>We load and deliver</h3>
-            <p>Your wood arrives stacked on our truck. We can dump it curbside or stack it neatly where you want it — just ask.</p>
+            <p>Your wood arrives on our truck. Dumped curbside is free — or we'll stack it neatly where you want it for $45 with a half cord, $65 with a full cord.</p>
           </div>
           <div class="step">
             <div class="num">3</div>
@@ -349,7 +361,7 @@
         <li>Split and cut to standard 16-inch lengths</li>
         <li>A measured, honest cord — we don't short-stack</li>
         <li>Delivered by our own crew, not a third party</li>
-        <li>Dumped curbside or stacked on request</li>
+        <li>Dumped curbside, or stacked where you want it (+$45 half cord / +$65 full cord)</li>
         <li>Sourced from local Utah tree work</li>
       </ul>
     </section>
@@ -403,11 +415,15 @@
               <option value="Light load (quarter cord) — $149 delivered">Light load (quarter cord) — $149 delivered</option>
               <option value="Half cord — $199 delivered">Half cord — $199 delivered</option>
               <option value="Full cord — $349 delivered">Full cord — $349 delivered</option>
-              <option value="Multiple cords">Multiple cords (tell us in notes)</option>
+              <option value="Multiple cords">Multiple cords — 2nd full cord just $299 (tell us in notes)</option>
             </select>
             <label for="f-addr">Delivery address</label>
             <input id="f-addr" type="text" name="delivery_address" autocomplete="street-address" required />
-            <label for="f-msg">Notes (stacking, gate code, etc.)</label>
+            <label style="display:flex; gap:10px; align-items:flex-start; cursor:pointer;">
+              <input type="checkbox" name="stacking" value="Yes — add stacking (+$45 half cord / +$65 full cord)" style="width:auto; margin-top:5px; flex:none;" />
+              <span>Add stacking: <strong>+$45</strong> (half cord) / <strong>+$65</strong> (full cord)</span>
+            </label>
+            <label for="f-msg">Notes (gate code, where to stack, etc.)</label>
             <textarea id="f-msg" name="message" rows="3"></textarea>
             <button type="submit">Place Order</button>
           </form>
