@@ -16,6 +16,51 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://strongroots.github.io/Strong-Roots-Co/murray.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://strongroots.github.io/Strong-Roots-Co/sandy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://strongroots.github.io/Strong-Roots-Co/draper.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://strongroots.github.io/Strong-Roots-Co/riverton.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://strongroots.github.io/Strong-Roots-Co/herriman.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://strongroots.github.io/Strong-Roots-Co/taylorsville.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://strongroots.github.io/Strong-Roots-Co/south-jordan.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://strongroots.github.io/Strong-Roots-Co/midvale.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://strongroots.github.io/Strong-Roots-Co/cottonwood-heights.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://strongroots.github.io/Strong-Roots-Co/tree-removal.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -52,6 +97,11 @@
   </url>
   <url>
     <loc>https://strongroots.github.io/Strong-Roots-Co/materials.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://strongroots.github.io/Strong-Roots-Co/faq.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
