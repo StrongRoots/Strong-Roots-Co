@@ -20,7 +20,7 @@
     { k: ["stump", "grind"],
       a: "We grind stumps below grade so you can replant or lay sod right over. Tap \"Free quote\" with the stump's rough diameter and we'll price it out." },
     { k: ["emergency", "storm", "fallen", "fell on", "urgent", "asap", "right now"],
-      a: "We're open 24/7 for storm damage and hazardous trees. For anything urgent, call " + PHONE + " right now — that's the fastest way to reach us. For non-urgent work, tap \"Free quote\"." },
+      a: "We're open 24/7 for everything — including storm damage and hazardous trees. For anything urgent, call " + PHONE + " right now — that's the fastest way to reach us. For non-urgent work, tap \"Free quote\"." },
     { k: ["area", "serve", "location", "where", "park city", "sandy", "draper", "murray", "herriman", "riverton", "west jordan"],
       a: "We serve Salt Lake, Utah, Davis, Weber & Wasatch counties — including West Jordan, Sandy, Draper, Murray, Taylorsville, Herriman, Riverton, South Jordan, Midvale, Park City and Heber." },
     { k: ["hour", "open", "when", "weekend", "sunday"],
