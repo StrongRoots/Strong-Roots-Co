@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- GA4: insert gtag snippet with Measurement ID here -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Land Clearing in West Jordan, Park City &amp; Northern Utah | Strong Roots Co.</title>
@@ -15,6 +16,8 @@
   <meta property="og:description" content="Land clearing in West Jordan, the Salt Lake Valley, Park City &amp; Northern Utah. Lot clearing, brush removal &amp; construction prep by Strong Roots Co. Free estimates — call (801) 330-1444." />
   <meta property="og:url" content="https://strongroots.github.io/Strong-Roots-Co/land-clearing.html" />
   <meta property="og:image" content="https://strongroots.github.io/Strong-Roots-Co/images/hero.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌳</text></svg>" />
   <script type="application/ld+json">
@@ -179,6 +182,9 @@
       color: #fff;
       text-align: center;
       padding: clamp(70px, 12vw, 140px) 20px;
+    }
+    @media (max-width: 760px) {
+      .hero { background-image: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.45)), url('images/hero-400.jpg'); }
     }
     .hero-inner { max-width: 800px; margin: 0 auto; }
     .hero h1 {
@@ -364,7 +370,7 @@
     <div class="trust" aria-label="Why choose us">
       <div class="trust-inner">
         <span>✔ Locally Owned</span>
-        <span>✔ 24/7 Emergency Service</span>
+        <span>✔ Available 24/7</span>
         <span>✔ Free Estimates</span>
         <span>✔ Open 24 Hours</span>
       </div>
@@ -434,7 +440,7 @@
               <li>Construction prep, fences, and fire-wise thinning</li>
           </ul>
         </div>
-        <img src="images/gallery1.jpg" alt="Strong Roots Co excavator clearing land in Utah" loading="lazy" width="800" height="600" />
+        <picture><source type="image/webp" srcset="images/gallery1-400.webp 400w, images/gallery1-800.webp 800w" sizes="(max-width: 760px) 100vw, 800px" /><img src="images/gallery1.jpg" alt="Strong Roots Co excavator clearing land in Utah" loading="lazy" width="800" height="600" /></picture>
       </div>
     </section>
 
@@ -504,7 +510,7 @@
         </div>
         <div class="card">
           <div class="icon" aria-hidden="true">🚨</div>
-          <h3>24/7 Emergency Service</h3>
+          <h3>Emergency Tree Service</h3>
           <p>Fallen trees and storm damage handled day or night, seven days a week. <a class="svc-link" href="emergency-tree-service.html">Learn more →</a></p>
         </div>
         <div class="card">
@@ -544,10 +550,21 @@
               <input id="f-name" type="text" name="name" autocomplete="name" required />
               <label for="f-phone">Phone number</label>
               <input id="f-phone" type="tel" name="phone" autocomplete="tel" required />
-              <label for="f-email">Email</label>
-              <input id="f-email" type="email" name="email" autocomplete="email" required />
+              <label for="f-service">Service needed</label>
+              <select id="f-service" name="service_needed" required>
+                <option value="">Choose…</option>
+                <option value="Tree removal">Tree removal</option>
+                <option value="Trimming & pruning">Trimming &amp; pruning</option>
+                <option value="Stump grinding">Stump grinding</option>
+                <option value="Emergency">Emergency</option>
+                <option value="Firewood">Firewood</option>
+                <option value="Materials delivery">Materials delivery</option>
+              </select>
+              <label for="f-email">Email (optional)</label>
+              <input id="f-email" type="email" name="email" autocomplete="email" />
               <label for="f-msg">How can we help?</label>
               <textarea id="f-msg" name="message" rows="4" required></textarea>
+              <p style="font-size:.9rem; color:var(--muted); margin:8px 0 0;">Optional: text us a photo of the tree at <a href="sms:+18013301444" style="color:var(--green); font-weight:700;">(801) 330-1444</a>.</p>
               <button type="submit">Send Message</button>
             </form>
           </div>
@@ -565,6 +582,7 @@
       <a href="park-city.html">Park City</a>
       <a href="https://www.facebook.com/profile.php?id=61577278409784" target="_blank" rel="noopener">Facebook</a>
       <a href="https://www.instagram.com/strongrootscompany/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Strong+Roots+Co.+West+Jordan+UT" target="_blank" rel="noopener">⭐ Leave a Google Review</a>
     </p>
     <p>
       <a href="tree-removal.html">Tree Removal</a>

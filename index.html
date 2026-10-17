@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- GA4: insert gtag snippet with Measurement ID here -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tree Service West Jordan &amp; Park City UT | Strong Roots Co.</title>
-  <meta name="description" content="Strong Roots Co. — based in West Jordan, serving Park City and the Salt Lake Valley. Safe tree removal, trimming & pruning, stump grinding, 24/7 emergency storm response, and land clearing. Free estimates — call (801) 330-1444." />
+  <meta name="description" content="Strong Roots Co. — based in West Jordan, serving Park City and the Salt Lake Valley. Safe tree removal, trimming & pruning, stump grinding, 24/7 service for everything, including emergency storm response, and land clearing. Free estimates — call (801) 330-1444." />
   <meta name="keywords" content="tree removal West Jordan, tree service Park City UT, tree trimming Salt Lake County, stump grinding Utah County, emergency tree service Summit County, land clearing Weber County" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#1e7a1e" />
@@ -17,6 +18,8 @@
   <meta property="og:description" content="Based in West Jordan, serving Park City and the Salt Lake Valley. Safe, reliable tree services. Free estimates." />
   <meta property="og:url" content="https://strongroots.github.io/Strong-Roots-Co/" />
   <meta property="og:image" content="https://strongroots.github.io/Strong-Roots-Co/images/hero.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌳</text></svg>" />
@@ -27,11 +30,12 @@
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": "Strong Roots Co.",
-    "description": "Locally owned tree service in Utah offering tree removal, trimming and pruning, stump grinding, 24/7 emergency services, and land clearing.",
+    "description": "Locally owned tree service in Utah offering tree removal, trimming and pruning, stump grinding, 24/7 service for everything, including emergency services, and land clearing.",
     "url": "https://strongroots.github.io/Strong-Roots-Co/",
     "telephone": "+1-801-330-1444",
     "email": "Strongrootsco25@gmail.com",
     "priceRange": "$$",
+    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "26"},
     "currenciesAccepted": "USD",
     "address": {
       "@type": "PostalAddress",
@@ -128,6 +132,9 @@
       color: #fff;
       text-align: center;
       padding: clamp(70px, 12vw, 140px) 20px;
+    }
+    @media (max-width: 760px) {
+      .hero { background-image: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.45)), url('images/hero-400.jpg'); }
     }
     .hero-inner { max-width: 800px; margin: 0 auto; }
     .hero h1 {
@@ -295,8 +302,8 @@
   <main id="top">
     <div class="hero">
       <div class="hero-inner">
-        <h1>Utah's Trusted Tree Removal &amp; Trimming Experts</h1>
-        <p class="sub">Safe, reliable, local tree services — from routine pruning to 24/7 emergency storm response.</p>
+        <h1>Tree Removal &amp; Trimming in West Jordan &amp; Park City, UT</h1>
+        <p class="sub">Utah's trusted tree removal &amp; trimming experts — safe, reliable, local tree services, from routine pruning to 24/7 service for everything, including emergency storm response.</p>
         <div class="cta-row">
           <a class="btn btn-orange" href="tel:+18013301444">📞 Call (801) 330-1444</a>
           <a class="btn btn-outline" href="sms:+18013301444">💬 Text Us</a>
@@ -309,7 +316,7 @@
       <div class="trust-inner">
         <span>✔ Same-Week Service</span>
         <span>✔ Locally Owned</span>
-        <span>✔ 24/7 Emergency Service</span>
+        <span>✔ Available 24/7</span>
         <span>✔ Free Estimates</span>
       </div>
     </div>
@@ -335,7 +342,7 @@
         </div>
         <div class="card">
           <div class="icon" aria-hidden="true">🚨</div>
-          <h3>24/7 Emergency Service</h3>
+          <h3>Emergency Tree Service</h3>
           <p>Fast response for storm damage, fallen trees, and dangerous limbs — day or night. <a href="emergency-tree-service.html">Emergency service details →</a></p>
         </div>
         <div class="card">
@@ -351,7 +358,7 @@
         <div class="card">
           <div class="icon" aria-hidden="true">🔥</div>
           <h3>Firewood Sales &amp; Delivery</h3>
-          <p>Split firewood delivered to your door — Light Load $149, half cord $199, full cord $349. <a href="firewood.html">See firewood &amp; pricing →</a></p>
+          <p>Split firewood delivered to your door — Light Load $149, half cord $199, full cord $349. <strong>🔥 Delivered TODAY — same-day delivery available.</strong> <a href="firewood.html">See firewood &amp; pricing →</a></p>
         </div>
         <div class="card">
           <div class="icon" aria-hidden="true">❓</div>
@@ -375,7 +382,7 @@
               <li>Eco-conscious debris recycling</li>
             </ul>
           </div>
-          <img src="images/gallery2.jpg" alt="Freshly pruned tree with Strong Roots Co work truck in Utah" loading="lazy" width="800" height="600" />
+          <picture><source type="image/webp" srcset="images/gallery2-400.webp 400w, images/gallery2-800.webp 800w" sizes="(max-width: 760px) 100vw, 800px" /><img src="images/gallery2.jpg" alt="Freshly pruned tree with Strong Roots Co work truck in Utah" loading="lazy" width="800" height="600" /></picture>
         </div>
       </div>
     </section>
@@ -385,19 +392,19 @@
       <p class="lead">Real jobs, real results — tree removal, pruning, land clearing, and tree care across Utah.</p>
       <div class="gallery-grid">
         <figure>
-          <img src="images/gallery1.jpg" alt="Strong Roots Co excavator clearing land in Utah" loading="lazy" width="800" height="600" />
+          <picture><source type="image/webp" srcset="images/gallery1-400.webp 400w, images/gallery1-800.webp 800w" sizes="(max-width: 760px) 100vw, 800px" /><img src="images/gallery1.jpg" alt="Strong Roots Co excavator clearing land in Utah" loading="lazy" width="800" height="600" /></picture>
           <figcaption>Land Clearing</figcaption>
         </figure>
         <figure>
-          <img src="images/gallery2.jpg" alt="Freshly pruned tree with Strong Roots Co work truck in Utah" loading="lazy" width="800" height="600" />
+          <picture><source type="image/webp" srcset="images/gallery2-400.webp 400w, images/gallery2-800.webp 800w" sizes="(max-width: 760px) 100vw, 800px" /><img src="images/gallery2.jpg" alt="Freshly pruned tree with Strong Roots Co work truck in Utah" loading="lazy" width="800" height="600" /></picture>
           <figcaption>Trimming &amp; Pruning</figcaption>
         </figure>
         <figure>
-          <img src="images/gallery3.jpg" alt="Strong Roots Co crew removing a tall pine tree in Utah" loading="lazy" width="800" height="600" />
+          <picture><source type="image/webp" srcset="images/gallery3-400.webp 400w, images/gallery3-800.webp 800w" sizes="(max-width: 760px) 100vw, 800px" /><img src="images/gallery3.jpg" alt="Strong Roots Co crew removing a tall pine tree in Utah" loading="lazy" width="800" height="600" /></picture>
           <figcaption>Tree Removal</figcaption>
         </figure>
         <figure>
-          <img src="images/gallery4.jpg" alt="Healthy mature evergreen tree cared for by Strong Roots Co in Utah" loading="lazy" width="800" height="600" />
+          <picture><source type="image/webp" srcset="images/gallery4-400.webp 400w, images/gallery4-800.webp 800w" sizes="(max-width: 760px) 100vw, 800px" /><img src="images/gallery4.jpg" alt="Healthy mature evergreen tree cared for by Strong Roots Co in Utah" loading="lazy" width="800" height="600" /></picture>
           <figcaption>Tree Care</figcaption>
         </figure>
       </div>
@@ -474,6 +481,7 @@
           <footer>— Paul Hardy, 5-star Google review</footer>
         </blockquote>
       </div>
+      <p style="margin-top:20px; text-align:center;"><a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&query=Strong+Roots+Co.+West+Jordan+UT" target="_blank" rel="noopener">⭐ Leave a review on Google</a></p>
     </section>
 
     <section class="block" id="contact" style="background:#fff; max-width:none;">
@@ -508,10 +516,21 @@
               <input id="f-name" type="text" name="name" autocomplete="name" required />
               <label for="f-phone">Phone number</label>
               <input id="f-phone" type="tel" name="phone" autocomplete="tel" required />
-              <label for="f-email">Email</label>
-              <input id="f-email" type="email" name="email" autocomplete="email" required />
+              <label for="f-service">Service needed</label>
+              <select id="f-service" name="service_needed" required>
+                <option value="">Choose…</option>
+                <option value="Tree removal">Tree removal</option>
+                <option value="Trimming & pruning">Trimming &amp; pruning</option>
+                <option value="Stump grinding">Stump grinding</option>
+                <option value="Emergency">Emergency</option>
+                <option value="Firewood">Firewood</option>
+                <option value="Materials delivery">Materials delivery</option>
+              </select>
+              <label for="f-email">Email (optional)</label>
+              <input id="f-email" type="email" name="email" autocomplete="email" />
               <label for="f-msg">How can we help?</label>
               <textarea id="f-msg" name="message" rows="4" required></textarea>
+              <p style="font-size:.9rem; color:var(--muted); margin:8px 0 0;">Optional: text us a photo of the tree at <a href="sms:+18013301444" style="color:var(--green); font-weight:700;">(801) 330-1444</a>.</p>
               <button type="submit">Send Message</button>
             </form>
           </div>
@@ -526,11 +545,13 @@
     <p>
       <a href="https://www.facebook.com/profile.php?id=61577278409784" target="_blank" rel="noopener">Facebook</a>
       <a href="https://www.instagram.com/strongrootscompany/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Strong+Roots+Co.+West+Jordan+UT" target="_blank" rel="noopener">⭐ Leave a Google Review</a>
     </p>
     <p>
       <a href="west-jordan.html">West Jordan Tree Service</a>
       <a href="park-city.html">Park City Tree Service</a>
       <a href="faq.html">Tree Service FAQs</a>
+      <a href="reviews.html">Reviews</a>
     </p>
     <p style="font-size:.85rem; opacity:.7;">© <span id="year">2026</span> Strong Roots Co. All rights reserved. Based in West Jordan — serving Park City, the Salt Lake Valley, and Northern Utah.</p>
   </footer>
