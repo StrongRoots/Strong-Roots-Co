@@ -299,7 +299,19 @@
     footer.site a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: 600; }
     footer.site a:hover { text-decoration: underline; }
 
-    /* ---------- Sticky mobile call bar ---------- */
+    
+    /* ---------- Quick-quote form (above the fold) ---------- */
+    .quick-quote { max-width: 880px; margin: 20px auto 0; padding: 0 16px; }
+    .quick-quote form { display: flex; gap: 10px; flex-wrap: wrap; background: #fff; border-radius: 12px; padding: 14px; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+    .quick-quote input, .quick-quote select { flex: 1 1 150px; padding: 12px; border-radius: 8px; border: 1px solid #d1d5db; font-size: 1rem; min-width: 0; }
+    .quick-quote button { flex: 1 1 150px; padding: 12px 20px; border: none; border-radius: 8px; background: var(--orange); color: #1f2937; font-weight: 800; font-size: 1rem; cursor: pointer; }
+    .quick-quote button:hover { filter: brightness(1.05); }
+    @media (max-width: 760px) {
+      .quick-quote form { flex-direction: column; }
+      .quick-quote input, .quick-quote select, .quick-quote button { flex: 1 1 auto; width: 100%; }
+    }
+
+/* ---------- Sticky mobile call bar ---------- */
     .mobile-call {
       display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
       background: #fff; border-top: 1px solid #e5e7eb; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
@@ -371,6 +383,28 @@
           <a class="btn btn-outline" href="sms:+18013301444">💬 Text Us</a>
           <a class="btn btn-outline" href="#contact">Get a Free Estimate</a>
         </div>
+      <div class="quick-quote" aria-label="Quick free estimate">
+        <form action="https://formsubmit.co/Strongrootsco25@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" value="Quick estimate request — Strong Roots Co. website" />
+          <input type="hidden" name="_next" value="https://strongroots.github.io/Strong-Roots-Co/thank-you.html" />
+          <input type="text" name="name" placeholder="Your name" autocomplete="name" required aria-label="Your name" />
+          <input type="tel" name="phone" placeholder="Phone number" autocomplete="tel" required aria-label="Phone number" />
+          <select name="service_needed" required aria-label="Service needed">
+            
+            <option value="">Service needed…</option>
+            <option value="Tree removal" selected>Tree removal</option>
+            <option value="Trimming &amp; pruning">Trimming &amp; pruning</option>
+            <option value="Stump grinding">Stump grinding</option>
+            <option value="Emergency">Emergency</option>
+            <option value="Land clearing">Land clearing</option>
+            <option value="Firewood">Firewood</option>
+            <option value="Materials delivery">Materials delivery</option>
+          </select>
+          <button type="submit">Get My Free Estimate</button>
+        </form>
+      </div>
       </div>
     </div>
 
