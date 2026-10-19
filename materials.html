@@ -45,6 +45,62 @@
     "telephone": "+1-801-330-1444"
   }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How fast can I get materials delivered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most orders deliver within a few days. Text or call (801) 330-1444 and we'll confirm a delivery window that works for you — you can reach us 24/7."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much material do I need for my project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check the coverage guide on our materials page — one cubic yard covers about 108 square feet at 3 inches deep. Or just text us your measurements and what you're building, and we'll work out how many loads (or yards of mulch) it takes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where will you dump the load?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In your driveway or curbside — wherever you point us when we arrive. Add a note in the order form if you have a specific spot in mind."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you deliver outside the Salt Lake Valley?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Park City and Heber add $75 per trip; Utah County and Davis County add $40 per trip. Delivery across the Salt Lake Valley is included in the load price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I combine a materials delivery with tree work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. If we're already coming out for tree work, we can bring a load of topsoil, mulch, or gravel on the same trip — just mention it when you book."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a minimum order for mulch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No minimum. Mulch is sold by the cubic yard at $50 per yard delivered, so you can order exactly what your beds need."
+      }
+    }
+  ]
+}
+  </script>
   <style>
     :root {
       --green: #1e7a1e;
@@ -200,6 +256,12 @@
     .counties { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .counties span { background: #e8f3e8; color: var(--green-dark); padding: 6px 12px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
 
+
+    .hero-note { margin: 18px 0 0; font-size: .95rem; opacity: .92; text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+    .faq-item { background: var(--card); border-radius: var(--radius); padding: 20px 22px; box-shadow: 0 2px 10px rgba(0,0,0,.07); margin-bottom: 14px; border-left: 4px solid var(--orange); }
+    .faq-item h3 { margin: 0 0 6px; font-size: 1.05rem; color: var(--green-dark); }
+    .faq-item p { margin: 0; color: var(--ink); }
+
     footer.site { background: #111827; color: #d1d5db; text-align: center; padding: 32px 20px 90px; }
     footer.site a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: 600; }
     footer.site a:hover { text-decoration: underline; }
@@ -261,12 +323,13 @@
     <div class="hero">
       <div class="hero-inner">
         <h1>Landscaping Materials, Delivered 🚚</h1>
-        <p class="sub">Topsoil, gravel, road base, sand &amp; mulch — delivered by the load and dumped right in your driveway. Mulch by the yard.</p>
+        <p class="sub">Top sellers: topsoil <strong>$350/load</strong> · gravel <strong>$575/load</strong> · road base <strong>$375/load</strong> — dumped right in your driveway.</p>
         <div class="cta-row">
-          <a class="btn btn-orange" href="sms:+18013301444">💬 Text Your Order: (801) 330-1444</a>
-          <a class="btn btn-outline" href="tel:+18013301444">📞 Call Us</a>
+          <a class="btn btn-orange" href="tel:+18013301444">📞 Call (801) 330-1444</a>
+          <a class="btn btn-outline" href="sms:+18013301444">💬 Text Your Order</a>
           <a class="btn btn-outline" href="#order">Order Online</a>
         </div>
+        <p class="hero-note">Available 24/7 — order any time, day or night.</p>
       </div>
     </div>
 
@@ -428,6 +491,36 @@
       </div>
     </section>
 
+    <section class="block">
+      <h2>Materials Delivery FAQ</h2>
+      <p class="lead">Quick answers before you order.</p>
+      <div class="faq-item">
+        <h3>How fast can I get materials delivered?</h3>
+        <p>Most orders deliver within a few days. Text or call <a href="tel:+18013301444" style="color:var(--green); font-weight:700;">(801) 330-1444</a> and we'll confirm a delivery window that works for you — you can reach us 24/7.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much material do I need for my project?</h3>
+        <p>Check the coverage guide above — one cubic yard covers about 108 square feet at 3 inches deep. Or just text us your measurements and what you're building, and we'll work out how many loads (or yards of mulch) it takes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Where will you dump the load?</h3>
+        <p>In your driveway or curbside — wherever you point us when we arrive. Add a note in the order form if you have a specific spot in mind.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you deliver outside the Salt Lake Valley?</h3>
+        <p>Yes. Park City and Heber add $75 per trip; Utah County and Davis County add $40 per trip. Delivery across the Salt Lake Valley is included in the load price.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I combine a materials delivery with tree work?</h3>
+        <p>Absolutely. If we're already coming out for tree work, we can bring a load of topsoil, mulch, or gravel on the same trip — just mention it when you book.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there a minimum order for mulch?</h3>
+        <p>No minimum. Mulch is sold by the cubic yard at $50 per yard delivered, so you can order exactly what your beds need.</p>
+      </div>
+      <p style="margin-top:18px;">Still have a question? Call or text <a href="tel:+18013301444" style="color:var(--green); font-weight:700;">(801) 330-1444</a> any time.</p>
+    </section>
+
     <section class="block" id="order" style="background:#fff; max-width:none;">
       <div style="max-width:1100px; margin:0 auto;">
         <h2>Order Materials</h2>
@@ -465,8 +558,8 @@
                 <option value="Pea gravel / decorative rock — price depends on type">Pea gravel / decorative rock — price depends on type</option>
                 <option value="Pavers / wall block / flagstone — quote">Pavers / wall block / flagstone — quote</option>
               </select>
-              <label for="f-qty">Quantity (loads — or yards for mulch)</label>
-              <input id="f-qty" type="number" name="quantity" min="1" step="1" placeholder="e.g. 1 load, or 4 yards of mulch" required />
+              <label for="f-qty">Approximate amount</label>
+              <input id="f-qty" type="text" name="quantity" placeholder="e.g. 1 load, or 4 yards of mulch" required />
               <label for="f-addr">Delivery address</label>
               <input id="f-addr" type="text" name="delivery_address" autocomplete="street-address" required />
               <label for="f-msg">Notes (where to dump, gate code, sand/mulch type, etc.)</label>

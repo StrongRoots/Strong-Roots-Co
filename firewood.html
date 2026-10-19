@@ -64,6 +64,62 @@
     "telephone": "+1-801-330-1444"
   }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How fast can I get firewood delivered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Order today and we can often deliver the same day — same-day/expedited delivery is $75. Standard deliveries usually land within a few days. We're available 24/7, so text or call (801) 330-1444 any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept cash on delivery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — cash on delivery is welcome. One of our 5-star reviewers put it best: other companies wouldn't work with him for cash on delivery, but we did — and delivered exactly when he wanted the wood."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is your firewood seasoned and ready to burn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every load is seasoned, split, and cut to standard 16-inch lengths — ready to burn the day it lands in your driveway. No green wood, no hissing logs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will you stack the firewood for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Add stacking to any order — $45 with a half cord or $65 with a full cord — and we'll stack it neatly where you want it instead of leaving a pile in the driveway."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you deliver firewood to?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delivery is free across the Salt Lake Valley. Park City, Summit County, Utah County, and Davis County add $50 per trip; Wasatch County adds $75."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Winter Plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prepay $325 per cord (2-cord minimum) and lock in your winter supply ahead of the cold-season rush. Choose “Winter Plan” in the order form or mention it when you text us."
+      }
+    }
+  ]
+}
+  </script>
   <style>
     :root {
       --green: #1e7a1e;
@@ -226,6 +282,12 @@
     .counties { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
     .counties span { background: #e8f3e8; color: var(--green-dark); padding: 6px 12px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
 
+
+    .hero-note { margin: 18px 0 0; font-size: .95rem; opacity: .92; text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+    .faq-item { background: var(--card); border-radius: var(--radius); padding: 20px 22px; box-shadow: 0 2px 10px rgba(0,0,0,.07); margin-bottom: 14px; border-left: 4px solid var(--orange); }
+    .faq-item h3 { margin: 0 0 6px; font-size: 1.05rem; color: var(--green-dark); }
+    .faq-item p { margin: 0; color: var(--ink); }
+
     footer.site { background: #111827; color: #d1d5db; text-align: center; padding: 32px 20px 90px; }
     footer.site a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: 600; }
     footer.site a:hover { text-decoration: underline; }
@@ -286,13 +348,14 @@
   <main id="top">
     <div class="hero">
       <div class="hero-inner">
-        <h1>Seasoned Firewood, Delivered to Your Door 🔥</h1>
-        <p class="sub">Split, seasoned, ready-to-burn firewood — delivered across the Salt Lake Valley and Park City by your local tree crew.</p>
+        <h1>Firewood Delivered Today 🔥</h1>
+        <p class="sub">Quarter cord <strong>$149</strong> &nbsp;·&nbsp; Half cord <strong>$199</strong> &nbsp;·&nbsp; Full cord <strong>$349</strong> — delivery included. Seasoned, split, ready to burn.</p>
         <div class="cta-row">
-          <a class="btn btn-orange" href="sms:+18013301444">💬 Text Your Order: (801) 330-1444</a>
-          <a class="btn btn-outline" href="tel:+18013301444">📞 Call Us</a>
+          <a class="btn btn-orange" href="tel:+18013301444">📞 Call (801) 330-1444</a>
+          <a class="btn btn-outline" href="sms:+18013301444">💬 Text to Order</a>
           <a class="btn btn-outline" href="#order">Order Online</a>
         </div>
+        <p class="hero-note">Available 24/7 — order any time, day or night.</p>
       </div>
     </div>
 
@@ -335,6 +398,27 @@
           <p>128 cubic feet stacked — roughly 600 splits. Enough to heat with all winter or stock the cabin.</p>
           <a class="btn btn-orange" href="sms:+18013301444?&body=Hi!%20I'd%20like%20to%20order%20a%20full%20cord%20of%20firewood.">💬 Order Full Cord</a>
         </div>
+        <div class="price-card">
+          <h3>Second Full Cord</h3>
+          <div class="price">$299</div>
+          <div class="per">full cord, delivered</div>
+          <p>Add a second full cord to any order and save $50.</p>
+          <a class="btn btn-orange" href="sms:+18013301444?&body=Hi!%20I'd%20like%20to%20order%202%20full%20cords%20of%20firewood.">💬 Order 2 Cords</a>
+        </div>
+        <div class="price-card">
+          <h3>Stacking Service</h3>
+          <div class="price">+$45</div>
+          <div class="per">half cord · +$65 full cord</div>
+          <p>We stack it neatly where you want it — no pile in the driveway.</p>
+          <a class="btn btn-orange" href="sms:+18013301444?&body=Hi!%20I'd%20like%20firewood%20delivered%20with%20stacking.">💬 Add Stacking</a>
+        </div>
+        <div class="price-card">
+          <h3>Winter Plan</h3>
+          <div class="price">$325</div>
+          <div class="per">per cord, prepaid · 2-cord min</div>
+          <p>Lock in your winter supply ahead of the cold-season rush.</p>
+          <a class="btn btn-orange" href="sms:+18013301444?&body=Hi!%20I'd%20like%20the%20Winter%20Plan%20for%20firewood.">💬 Get Winter Plan</a>
+        </div>
       </div>
       <div class="stack-banner">
         <strong>💪 Want it stacked?</strong> Skip the pile in the driveway — we'll stack it neatly where you want it.
@@ -352,18 +436,18 @@
         <div class="steps">
           <div class="step">
             <div class="num">1</div>
-            <h3>Text or call your order</h3>
-            <p>Tell us half or full cord and your address. We'll confirm a delivery window — usually within a few days.</p>
+            <h3>Pick your size</h3>
+            <p>Quarter cord $149, half cord $199, or full cord $349 — delivery included. Add stacking (+$45 half / +$65 full) or lock in the Winter Plan ($325/cord prepaid).</p>
           </div>
           <div class="step">
             <div class="num">2</div>
-            <h3>We load and deliver</h3>
-            <p>Your wood arrives on our truck. Dumped curbside is free — or we'll stack it neatly where you want it for $45 with a half cord, $65 with a full cord.</p>
+            <h3>Tell us where</h3>
+            <p>Text or call (801) 330-1444 with your size, address, and preferred delivery day. Cash on delivery accepted — no prepayment needed.</p>
           </div>
           <div class="step">
             <div class="num">3</div>
-            <h3>Light it up</h3>
-            <p>Seasoned, split, cut to 16-inch lengths. Ready to burn the day it lands in your driveway.</p>
+            <h3>We deliver</h3>
+            <p>Dumped curbside free, or stacked where you want it. Same-day delivery available (+$75). Seasoned and ready to burn the day it arrives.</p>
           </div>
         </div>
       </div>
@@ -417,6 +501,38 @@
       </div>
     </section>
 
+    <section class="block" style="background:#fff; max-width:none;">
+      <div style="max-width:1100px; margin:0 auto;">
+        <h2>Firewood Delivery FAQ</h2>
+        <p class="lead">Quick answers before you order.</p>
+      <div class="faq-item">
+        <h3>How fast can I get firewood delivered?</h3>
+        <p>Order today and we can often deliver the same day — same-day/expedited delivery is $75. Standard deliveries usually land within a few days. We're available 24/7, so text or call <a href="tel:+18013301444" style="color:var(--green); font-weight:700;">(801) 330-1444</a> any time.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you accept cash on delivery?</h3>
+        <p>Yes — cash on delivery is welcome. One of our 5-star reviewers put it best: other companies wouldn't work with him for cash on delivery, but we did — and delivered exactly when he wanted the wood.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is your firewood seasoned and ready to burn?</h3>
+        <p>Yes. Every load is seasoned, split, and cut to standard 16-inch lengths — ready to burn the day it lands in your driveway. No green wood, no hissing logs.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will you stack the firewood for me?</h3>
+        <p>Yes. Add stacking to any order — $45 with a half cord or $65 with a full cord — and we'll stack it neatly where you want it instead of leaving a pile in the driveway.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What areas do you deliver firewood to?</h3>
+        <p>Delivery is free across the Salt Lake Valley. Park City, Summit County, Utah County, and Davis County add $50 per trip; Wasatch County adds $75.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the Winter Plan?</h3>
+        <p>Prepay $325 per cord (2-cord minimum) and lock in your winter supply ahead of the cold-season rush. Choose “Winter Plan” in the order form below or mention it when you text us.</p>
+      </div>
+        <p style="margin-top:18px;">Still have a question? Call or text <a href="tel:+18013301444" style="color:var(--green); font-weight:700;">(801) 330-1444</a> any time.</p>
+      </div>
+    </section>
+
     <section class="block" id="order">
       <h2>Order Firewood</h2>
       <p class="lead">Prefer the form? Send it in and we'll text you back with a delivery window.</p>
@@ -433,7 +549,7 @@
           <form action="https://formsubmit.co/Strongrootsco25@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_subject" value="New firewood order — Strong Roots Co. website" />
+            <input type="hidden" name="_subject" value="Firewood order — Strong Roots Co. website" />
             <input type="hidden" name="_next" value="https://strongroots.github.io/Strong-Roots-Co/thank-you.html" />
             <label for="f-name">Your name</label>
             <input id="f-name" type="text" name="name" autocomplete="name" required />
@@ -450,6 +566,8 @@
             </select>
             <label for="f-addr">Delivery address</label>
             <input id="f-addr" type="text" name="delivery_address" autocomplete="street-address" required />
+            <label for="f-day">Preferred delivery day</label>
+            <input id="f-day" type="text" name="preferred_delivery_day" placeholder="e.g. today, tomorrow, Saturday…" />
             <label style="display:flex; gap:10px; align-items:flex-start; cursor:pointer;">
               <input type="checkbox" name="stacking" value="Yes — add stacking (+$45 half cord / +$65 full cord)" style="width:auto; margin-top:5px; flex:none;" />
               <span>Add stacking: <strong>+$45</strong> (half cord) / <strong>+$65</strong> (full cord)</span>
