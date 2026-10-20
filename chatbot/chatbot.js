@@ -151,7 +151,7 @@
     var btn = el("button", "", "");
     btn.id = "sr-chat-btn";
     btn.setAttribute("aria-label", "Chat with us");
-    btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg><span class="sr-dot"></span>';
+    btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg><span class="sr-dot">1</span>';
 
     panel = el("div", ""); panel.id = "sr-chat-panel";
     panel.innerHTML =
@@ -173,6 +173,11 @@
       var open = force !== undefined ? force : !panel.classList.contains("sr-open");
       panel.classList.toggle("sr-open", open);
       if (open && !panelPinned) placePanel();
+      if (open) {
+        var dot = btn.querySelector(".sr-dot");
+        if (dot) dot.classList.add("sr-hide");
+        try { localStorage.setItem("sr-chat-seen", "1"); } catch (e) {}
+      }
       if (open && !opened) {
         opened = true;
         addMsg("Hi! 👋 Looking for tree work, firewood, or materials delivery? Ask me anything — or tap below to get a free quote.");
@@ -260,6 +265,12 @@
       onEnd: function (wasDrag) { if (wasDrag) { panelPinned = true; savePos(); } }
     });
     btn.onclick = function () { if (suppressClick) { suppressClick = false; return; } toggle(); };
+    try {
+      if (localStorage.getItem("sr-chat-seen")) {
+        var seenDot = btn.querySelector(".sr-dot");
+        if (seenDot) seenDot.classList.add("sr-hide");
+      }
+    } catch (e) {}
     restorePos();
     panel.querySelector("#sr-chat-close").onclick = function () { toggle(false); };
     function send() {
