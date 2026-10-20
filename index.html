@@ -42,7 +42,7 @@
     "telephone": "+1-801-330-1444",
     "email": "Strongrootsco25@gmail.com",
     "priceRange": "$$",
-    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "26"},
+    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "28"},
     "currenciesAccepted": "USD",
     "address": {
       "@type": "PostalAddress",
@@ -222,6 +222,16 @@
     blockquote p { margin: 0 0 10px; font-style: italic; }
     blockquote footer { font-weight: 700; color: var(--green-dark); font-size: .9rem; }
     .stars { color: var(--orange); letter-spacing: 2px; }
+
+    /* ---------- Rotating reviews ---------- */
+    .review-rotator { max-width: 760px; margin: 20px auto 0; }
+    .review-slide { display: none; text-align: center; padding: 30px 26px; }
+    .review-slide.active { display: block; animation: reviewFade .6s ease; }
+    .review-slide p { font-size: 1.08rem; line-height: 1.55; }
+    @keyframes reviewFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    .review-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+    .review-dots button { width: 11px; height: 11px; border-radius: 50%; border: none; background: #cbd5e1; cursor: pointer; padding: 0; }
+    .review-dots button.active { background: var(--orange); }
 
     /* ---------- Contact ---------- */
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 20px; align-items: start; }
@@ -515,17 +525,34 @@
 
     <section class="block" id="reviews">
       <h2>What Our Clients Say</h2>
-      <div class="quotes">
-        <blockquote>
+      <p class="lead" style="text-align:center;">5.0 stars from 28 Google reviews</p>
+      <div class="review-rotator" id="reviewRotator">
+        <blockquote class="review-slide active">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>“Austin is great and this company is amazing to work with! They’ve shown up on time, their communication is top notch and the services have all been high quality. I’ve had such a good experience so far, we’ve hired them to do some more work, and bigger jobs. Thanks for all your help Austin and Co.!”</p>
+          <footer>— b anderson, 5-star Google review, Salt Lake City</footer>
+        </blockquote>
+        <blockquote class="review-slide">
           <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
           <p>“Excellent work. They tackled several projects on our property, including the removal of an 80 foot tree. Highly recommend.”</p>
           <footer>— Marynell Hinton, 5-star Google review</footer>
         </blockquote>
-        <blockquote>
+        <blockquote class="review-slide">
           <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <p>Storm tree against his house: same-day assessment, next-day removal with no damage to the home, reasonable pricing. He'll use Strong Roots again as needed.</p>
+          <p>“I had a tree that fell against my house from all the storminess an he came over the same day and looked at it and then came the next day and brought the tree down. Quickly with no damage to my home. Reasonable pricing as well. I’ll use him again as needed. Good guy.”</p>
           <footer>— Paul Hardy, 5-star Google review</footer>
         </blockquote>
+        <blockquote class="review-slide">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>“If I had more money I would have bought 2 Cord it was great working with you. I tried to purchase from other companies but they didn’t want to work with me for cash on Delivery BUT YOU DID AND DELIVERED WHEN I WANTED FIRE WOOD SO THIS IS DEFINITELY THE BEST PLACE TO BUY WOOD From thanks again.”</p>
+          <footer>— Kurt Carroll, 5-star Google review, firewood delivery</footer>
+        </blockquote>
+        <blockquote class="review-slide">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>“Great price”</p>
+          <footer>— Trudy Martinez, 5-star Google review, tree removal</footer>
+        </blockquote>
+        <div class="review-dots" id="reviewDots" aria-label="Choose a review"></div>
       </div>
       <p style="margin-top:20px; text-align:center;"><a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&query=Strong+Roots+Co.+West+Jordan+UT" target="_blank" rel="noopener">⭐ Leave a review on Google</a></p>
     </section>
@@ -621,6 +648,35 @@
     });
     // Current year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Rotating reviews — change every 15 seconds, pause on hover/touch
+    (function () {
+      var slides = Array.prototype.slice.call(document.querySelectorAll('.review-slide'));
+      var dotsWrap = document.getElementById('reviewDots');
+      var rotator = document.getElementById('reviewRotator');
+      if (!slides.length || !dotsWrap || !rotator) return;
+      var idx = 0, timer = null, dots = [];
+      slides.forEach(function (_, i) {
+        var d = document.createElement('button');
+        d.setAttribute('aria-label', 'Show review ' + (i + 1));
+        d.addEventListener('click', function () { show(i); restart(); });
+        dotsWrap.appendChild(d);
+        dots.push(d);
+      });
+      function show(n) {
+        idx = (n + slides.length) % slides.length;
+        slides.forEach(function (s, i) { s.classList.toggle('active', i === idx); });
+        dots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+      }
+      function start() { timer = setInterval(function () { show(idx + 1); }, 15000); }
+      function stop() { if (timer) clearInterval(timer); timer = null; }
+      function restart() { stop(); start(); }
+      rotator.addEventListener('mouseenter', stop);
+      rotator.addEventListener('mouseleave', restart);
+      rotator.addEventListener('touchstart', stop, { passive: true });
+      show(0);
+      start();
+    })();
   </script>
   <script src="chatbot/chatbot.js"></script>
 </body>
