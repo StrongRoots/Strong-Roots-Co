@@ -172,6 +172,7 @@
     function toggle(force) {
       var open = force !== undefined ? force : !panel.classList.contains("sr-open");
       panel.classList.toggle("sr-open", open);
+      if (open && !panelPinned) placePanel();
       if (open && !opened) {
         opened = true;
         addMsg("Hi! 👋 Looking for tree work, firewood, or materials delivery? Ask me anything — or tap below to get a free quote.");
@@ -179,7 +180,87 @@
       }
       if (open) setTimeout(function () { input.focus(); }, 100);
     }
-    btn.onclick = function () { toggle(); };
+    /* --- Draggable widget: drag the button to move it; the panel follows.
+       Drag the panel's header to move the panel on its own. Position persists. --- */
+    var suppressClick = false;
+    var panelPinned = false;
+    function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+    function toXY(node) {
+      var r = node.getBoundingClientRect();
+      node.style.left = r.left + "px";
+      node.style.top = r.top + "px";
+      node.style.right = "auto";
+      node.style.bottom = "auto";
+      return r;
+    }
+    function savePos() {
+      try {
+        var b = btn.getBoundingClientRect(), p = panel.getBoundingClientRect();
+        localStorage.setItem("sr-chat-pos", JSON.stringify({
+          bl: b.left, bt: b.top, pl: p.left, pt: p.top, pinned: panelPinned
+        }));
+      } catch (e) {}
+    }
+    function restorePos() {
+      try {
+        var s = JSON.parse(localStorage.getItem("sr-chat-pos") || "null");
+        if (!s) return;
+        btn.style.left = s.bl + "px"; btn.style.top = s.bt + "px";
+        btn.style.right = "auto"; btn.style.bottom = "auto";
+        if (s.pinned) {
+          panelPinned = true;
+          panel.style.left = s.pl + "px"; panel.style.top = s.pt + "px";
+          panel.style.right = "auto"; panel.style.bottom = "auto";
+        }
+      } catch (e) {}
+    }
+    function placePanel() {
+      var r = btn.getBoundingClientRect();
+      var pw = Math.min(378, window.innerWidth - 40);
+      var ph = Math.min(540, window.innerHeight - 130);
+      panel.style.left = clamp(r.left + r.width - pw, 8, Math.max(8, window.innerWidth - pw - 8)) + "px";
+      panel.style.top = clamp(r.top - ph - 12, 8, Math.max(8, window.innerHeight - ph - 8)) + "px";
+      panel.style.right = "auto"; panel.style.bottom = "auto";
+    }
+    function dragify(handle, node, opts) {
+      var on = false, moved = false, sx = 0, sy = 0, ox = 0, oy = 0;
+      handle.addEventListener("pointerdown", function (e) {
+        if (opts.ignore && e.target.closest(opts.ignore)) return;
+        on = true; moved = false; sx = e.clientX; sy = e.clientY;
+        var r = toXY(node); ox = r.left; oy = r.top;
+        handle.classList.add("sr-dragging"); node.classList.add("sr-dragging");
+        try { handle.setPointerCapture(e.pointerId); } catch (err) {}
+        e.preventDefault();
+      });
+      handle.addEventListener("pointermove", function (e) {
+        if (!on) return;
+        var dx = e.clientX - sx, dy = e.clientY - sy;
+        if (!moved && Math.hypot(dx, dy) < 8) return;
+        moved = true;
+        var w = node.offsetWidth, h = node.offsetHeight;
+        node.style.left = clamp(ox + dx, 0, Math.max(0, window.innerWidth - w)) + "px";
+        node.style.top = clamp(oy + dy, 0, Math.max(0, window.innerHeight - h)) + "px";
+        if (opts.onMove) opts.onMove();
+      });
+      function done() {
+        if (!on) return;
+        on = false;
+        handle.classList.remove("sr-dragging"); node.classList.remove("sr-dragging");
+        if (opts.onEnd) opts.onEnd(moved);
+      }
+      handle.addEventListener("pointerup", done);
+      handle.addEventListener("pointercancel", done);
+    }
+    dragify(btn, btn, {
+      onMove: function () { if (panel.classList.contains("sr-open") && !panelPinned) placePanel(); },
+      onEnd: function (wasDrag) { suppressClick = wasDrag; if (wasDrag) savePos(); }
+    });
+    dragify(panel.querySelector("#sr-chat-head"), panel, {
+      ignore: "#sr-chat-close",
+      onEnd: function (wasDrag) { if (wasDrag) { panelPinned = true; savePos(); } }
+    });
+    btn.onclick = function () { if (suppressClick) { suppressClick = false; return; } toggle(); };
+    restorePos();
     panel.querySelector("#sr-chat-close").onclick = function () { toggle(false); };
     function send() {
       var v = input.value.trim();

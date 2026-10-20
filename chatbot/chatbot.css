@@ -74,3 +74,8 @@
   #sr-chat-panel { right: 10px; bottom: 84px; max-width: calc(100vw - 20px); }
   #sr-chat-btn { right: 14px; bottom: 14px; }
 }
+/* Draggable widget */
+#sr-chat-btn { cursor: grab; touch-action: none; }
+#sr-chat-btn.sr-dragging { cursor: grabbing; transition: none; transform: none; }
+#sr-chat-head { cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; }
+#sr-chat-head.sr-dragging { cursor: grabbing; }
