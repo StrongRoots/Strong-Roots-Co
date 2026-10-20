@@ -23,4 +23,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://strongroots.github.io/Strong-Roots-Co/sitemap.xml
+Sitemap: https://strongrootscompany.com/sitemap.xml
