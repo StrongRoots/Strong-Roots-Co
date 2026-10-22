@@ -10,7 +10,7 @@
     { k: ["price", "cost", "much", "quote", "estimate", "charge"],
       a: "Tree work is priced per job since every tree is different — but estimates are always FREE. Tell me what you need (or tap \"Free quote\" below) and Austin will get back to you with a number, usually same-day." },
     { k: ["firewood", "wood", "cord", "fireplace", "burn"],
-      a: "We deliver seasoned, split firewood:\n• Light Load (quarter cord) — $149 delivered\n• Half Cord — $199 delivered\n• Full Cord — $349 delivered (best value)\nDelivery is free in the Salt Lake Valley. Want to order? Tap \"Free quote\" and mention firewood, or call " + PHONE + "." },
+      a: "We deliver seasoned, split firewood:\n• Light Load (quarter cord) — $149 delivered\n• Half Cord — $199 delivered\n• Full Cord — $300 delivered (best value)\nDelivery is free in the Salt Lake Valley. Want to order? Tap \"Free quote\" and mention firewood, or call " + PHONE + "." },
     { k: ["topsoil", "gravel", "mulch", "materials", "dirt", "sand", "rock", "road base", "compost", "delivery", "deliver"],
       a: "We deliver landscaping materials by the load:\n• Topsoil — $350/load\n• Gravel — $575/load\n• Road base — $375/load\n• Sand — $400–$550 (by type)\n• Mulch — $50/cubic yard\nFill dirt, compost & decorative rock are call-for-pricing. Salt Lake Valley delivery included; Park City/Heber +$75, Utah/Davis County +$40." },
     { k: ["removal", "remove", "cut down", "take down", "tree removal"],
